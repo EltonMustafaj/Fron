@@ -20,34 +20,15 @@ const navLinks = [
 const cocktailLists = [
 	{ name: "Espresso", country: "☕", detail: "Kafe", price: "1.00€" },
 	{ name: "Makiato", country: "☕", detail: "Kafe", price: "1.00€" },
-	{ name: "Makiato e madhe", country: "☕", detail: "Kafe", price: "1.50€" },
-	{ name: "Kafe me qumësht", country: "☕", detail: "Kafe", price: "1.50€" },
 	{ name: "Cappuccino", country: "☕", detail: "Kafe", price: "1.50€" },
-	{ name: "Latte", country: "☕", detail: "Kafe", price: "2.00€" },
-	{ name: "Nescafé", country: "☕", detail: "Kafe", price: "1.50€" },
-	{ name: "Amerikane", country: "☕", detail: "Kafe", price: "1.50€" },
-	{ name: "Coca-Cola / Zero", country: "🥤", detail: "Pije Freskuese", price: "2.00€" },
-	{ name: "Fanta / Sprite", country: "🥤", detail: "Pije Freskuese", price: "2.00€" },
-	{ name: "Ice Tea", country: "🥤", detail: "Pije Freskuese", price: "2.00€" },
-	{ name: "Schweppes Tonic", country: "🥤", detail: "Pije Freskuese", price: "2.00€" },
-	{ name: "Red Bull", country: "⚡", detail: "Pije Energjike", price: "3.50€" },
-	{ name: "Ujë Natyral / Mineral", country: "💧", detail: "Pije", price: "1.00€" },
+	{ name: "Coca-Cola", country: "🥤", detail: "Pije Freskuese", price: "2.00€" },
 ];
 
 const mockTailLists = [
 	{ name: "Mojito", country: "🍹", detail: "Koktel", price: "5.00€" },
-	{ name: "Sex on the Beach", country: "🍹", detail: "Koktel", price: "5.00€" },
-	{ name: "Piña Colada", country: "🍹", detail: "Koktel", price: "5.00€" },
-	{ name: "Tequila Sunrise", country: "🍹", detail: "Koktel", price: "5.00€" },
 	{ name: "Blue Lagoon", country: "🍹", detail: "Koktel", price: "5.00€" },
 	{ name: "Gin Tonic", country: "🍸", detail: "Mixer", price: "4.00€" },
-	{ name: "Whiskey Cola", country: "🥃", detail: "Mixer", price: "4.00€" },
-	{ name: "Peja / Prishtina", country: "🍺", detail: "Birrë", price: "2.00€" },
-	{ name: "Heineken / Corona", country: "🍺", detail: "Birrë", price: "3.50€" },
-	{ name: "Beck’s / Tuborg", country: "🍺", detail: "Birrë", price: "2.50€" },
-	{ name: "Vodka / Gin / Whiskey", country: "🥃", detail: "Pije e fortë", price: "3.00€" },
-	{ name: "Tequila / Jägermeister", country: "🥃", detail: "Pije e fortë", price: "3.00€" },
-	{ name: "Rakí", country: "🥃", detail: "Pije Tradicionale", price: "1.50€" },
+	{ name: "Birrë Peja", country: "🍺", detail: "Birrë", price: "2.00€" },
 ];
 
 const profileLists = [
