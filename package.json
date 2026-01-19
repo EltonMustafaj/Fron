@@ -1,18 +1,11 @@
 {
-  "name": "mojito-cocktail",
-  "version": "0.0.0",
+  "name": "fron-bar",
+  "version": "1.0.0",
   "private": true,
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "homepage": "https://github.com/muzammilnadeem121/Mojito-Cocktail#readme",
-  "bugs": {
-    "url": "https://github.com/muzammilnadeem121/Mojito-Cocktail/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/muzammilnadeem121/Mojito-Cocktail.git"
-  },
+  "description": "Fron Bar - Visually rich landing page in Istog, Kosovë.",
+  "homepage": "https://fronbar.com",
   "license": "ISC",
-  "author": "muzammilnadeem121",
+  "author": "Fron Bar",
   "type": "module",
   "main": "eslint.config.js",
   "scripts": {
