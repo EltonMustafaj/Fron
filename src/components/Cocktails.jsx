@@ -31,13 +31,12 @@ const Cocktails = () => {
                     <h2 className="text-gradient mb-8">Pijet e Popullarizuara</h2>
                     <ul>
                         {
-                            cocktailLists.map(({ name, country, detail, price }) => {
+                            cocktailLists.map(({ name, country, detail }) => {
                                 return <li key={name}>
                                     <div className='md:me-28'>
                                         <h3>{name}</h3>
                                         <p>{country} | {detail}</p>
                                     </div>
-                                    <span>- {price}</span>
                                 </li>
                             })
                         }
@@ -47,13 +46,12 @@ const Cocktails = () => {
                     <h2 className="text-gradient mb-8">Pije Freskuese & Tjera</h2>
                     <ul>
                         {
-                            mockTailLists.map(({ name, country, detail, price }) => {
+                            mockTailLists.map(({ name, country, detail }) => {
                                 return <li key={name}>
                                     <div className='md:me-28'>
                                         <h3>{name}</h3>
                                         <p>{country} | {detail}</p>
                                     </div>
-                                    <span>- {price}</span>
                                 </li>
                             })
                         }

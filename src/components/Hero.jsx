@@ -58,6 +58,30 @@ const Hero = () => {
                 currentTime: videoRef.current.duration
             });
         }
+        const onMouseMove = (e) => {
+            const { clientX, clientY } = e;
+            const xPos = (clientX / window.innerWidth - 0.5) * 40;
+            const yPos = (clientY / window.innerHeight - 0.5) * 40;
+
+            gsap.to(".left-leaf", {
+                x: xPos,
+                y: yPos,
+                duration: 1,
+                ease: "power2.out"
+            });
+            gsap.to(".right-leaf", {
+                x: -xPos,
+                y: -yPos,
+                duration: 1,
+                ease: "power2.out"
+            });
+        };
+
+        window.addEventListener('mousemove', onMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', onMouseMove);
+        };
     }, []);
 
     return (

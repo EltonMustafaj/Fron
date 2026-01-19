@@ -8,7 +8,7 @@ const navLinks = [
 		title: "Rreth nesh",
 	},
 	{
-		id: "work",
+		id: "art",
 		title: "Arti ynë",
 	},
 	{

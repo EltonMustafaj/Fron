@@ -40,18 +40,20 @@ const About = () => {
                         <p className="text-white/70">
                             Çdo pije që shërbejmë është një pasqyrim i fiksimit tonë pas detajeve — nga shtypja e parë e mentes deri te dekorimi final. Ky kujdes është ai që e kthen një pije të thjeshtë në diçka vërtet të paharrueshme.
                         </p>
-                        <div className="flex items-center gap-4 mt-6">
-                            <div className="bg-yellow/10 p-4 rounded-2xl border border-yellow/20">
-                                <p className="text-3xl font-bold text-yellow">
-                                    <span>4.9</span>/5
-                                </p>
-                                <p className="text-[10px] uppercase tracking-wider text-white-100/60">
-                                    Vlerësimi i Klientëve
-                                </p>
+                        <div className="flex flex-wrap items-center gap-8 mt-10">
+                            <div className="relative group">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-yellow to-yellow/50 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                                <div className="relative bg-black/40 backdrop-blur-xl p-6 rounded-2xl border border-white/10 flex flex-col items-center min-w-[140px]">
+                                    <p className="text-4xl font-bold text-yellow font-modern-negra">4.9<span className="text-base text-white/40 ml-1">/5</span></p>
+                                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-2 text-center">Vlerësimi i Klientëve</p>
+                                </div>
                             </div>
-                            <div className="h-full flex flex-col justify-center">
-                                <p className="text-xl font-semibold">+1,000</p>
-                                <p className="text-[10px] uppercase tracking-wider text-white-100/60">Pije të shërbyera çdo muaj</p>
+                            <div className="relative group">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/5 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-500"></div>
+                                <div className="relative bg-black/40 backdrop-blur-xl p-6 rounded-2xl border border-white/10 flex flex-col items-center min-w-[140px]">
+                                    <p className="text-4xl font-bold text-white font-modern-negra">+1,000</p>
+                                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/50 mt-2 text-center">Pije çdo muaj</p>
+                                </div>
                             </div>
                         </div>
                     </div>
