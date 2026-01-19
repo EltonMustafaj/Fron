@@ -28,7 +28,7 @@ const Cocktails = () => {
 
             <div className="list">
                 <div className="popular">
-                    <h2>Më të Popullaruarat:</h2>
+                    <h2 className="text-gradient mb-8">Pijet e Popullarizuara</h2>
                     <ul>
                         {
                             cocktailLists.map(({ name, country, detail, price }) => {
@@ -44,7 +44,7 @@ const Cocktails = () => {
                     </ul>
                 </div>
                 <div className="loved">
-                    <h2>Pije Freskuese & Tjera:</h2>
+                    <h2 className="text-gradient mb-8">Pije Freskuese & Tjera</h2>
                     <ul>
                         {
                             mockTailLists.map(({ name, country, detail, price }) => {

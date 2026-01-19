@@ -31,15 +31,21 @@ const Navbar = () => {
     return (
         <nav>
             <div>
-                <a href="#hero" className='flex items-center gap-2'>
-                    <img src="images/logo.png" alt="logo" />
+                <a href="#hero" className='flex items-center gap-2' aria-label="Kreu - Fron Bar">
+                    <img src="/images/logo.png" alt="Fron Bar Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
                     <p>Fron Bar</p>
                 </a>
                 <ul>
                     {
                         navLinks.map((link) => (
                             <li key={link.id}>
-                                <a href={`#${link.id}`}>{link.title}</a>
+                                <a
+                                    href={`#${link.id}`}
+                                    className="hover:text-yellow transition-colors duration-300"
+                                    aria-label={`Navigo te ${link.title}`}
+                                >
+                                    {link.title}
+                                </a>
                             </li>
                         ))
                     }

@@ -21,6 +21,17 @@ body {
     color: white;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #e7d393 black;
+}
+
+::selection {
+    background-color: #e7d393;
+    color: black;
+}
+
+section {
+    scroll-margin-top: 80px;
 }
 
 @utility flex-center {

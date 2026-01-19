@@ -67,6 +67,7 @@ const storeInfo = {
 		phone: "+383 43 777 878",
 		email: "hello@fronbar.com",
 	},
+	mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fron+Bar+Istog",
 };
 
 const openingHours = [

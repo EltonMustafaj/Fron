@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react"
-import { openingHours, socials } from "../../constants"
+import { openingHours, socials, storeInfo } from "../../constants"
 import { SplitText } from "gsap/all"
 import gsap from "gsap"
 
@@ -15,36 +15,51 @@ const Contact = () => {
         });
 
         tl.from(titleSplit.words, { opacity: 0, yPercent: 100, stagger: 0.02 })
-            .from("#contact h3, #contact p", { opacity: 0, yPercent: 100, stagger: 0.04 })
+            .from("#contact h3, #contact p, #contact a", { opacity: 0, yPercent: 100, stagger: 0.04 })
             .to("#f-right-leaf", { y: -50, duration: 0.2, ease: "power1.inOut" })
             .to("#f-left-leaf", { y: 50, duration: 0.2, ease: "power1.inOut" }, "<")
     })
 
     return (
-        <footer id="contact">
-            <img src="/images/footer-right-leaf.png" alt="leaf" id="f-right-leaf" />
-            <img src="/images/footer-left-leaf.png" alt="leaf" id="f-left-leaf" />
+        <footer id="contact" className="bg-black/90">
+            <img src="/images/footer-right-leaf.png" alt="leaf decoration" id="f-right-leaf" />
+            <img src="/images/footer-left-leaf.png" alt="leaf decoration" id="f-left-leaf" />
 
             <div className="content">
-                <h2>Ku të na gjeni</h2>
+                <h2>{storeInfo.heading}</h2>
 
-                <div>
+                <div className="space-y-2">
                     <h3>Na Vizitoni</h3>
-                    <p>Rr. Nëna Terezë, Istog, Kosovë</p>
+                    <a
+                        href={storeInfo.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-yellow transition-colors underline-offset-4 hover:underline"
+                    >
+                        {storeInfo.address}
+                    </a>
                 </div>
 
-                <div>
+                <div className="space-y-2">
                     <h3>Na Kontaktoni</h3>
-                    <p>+383 43 777 878</p>
-                    <p>hello@fronbar.com</p>
+                    <p>
+                        <a href={`tel:${storeInfo.contact.phone.replace(/\s/g, '')}`} className="hover:text-yellow transition-colors">
+                            {storeInfo.contact.phone}
+                        </a>
+                    </p>
+                    <p>
+                        <a href={`mailto:${storeInfo.contact.email}`} className="hover:text-yellow transition-colors">
+                            {storeInfo.contact.email}
+                        </a>
+                    </p>
                 </div>
 
-                <div>
+                <div className="space-y-2">
                     <h3>Hapur Çdo Ditë</h3>
                     {
                         openingHours.map((item) => {
-                            return <p key={item.day}>
-                                {item.day} : {item.time}
+                            return <p key={item.day} className="text-white/80">
+                                <span className="font-semibold">{item.day}:</span> {item.time}
                             </p>
                         })
                     }
@@ -52,16 +67,26 @@ const Contact = () => {
 
                 <div>
                     <h3>Socialet</h3>
-                    <div className="flex-center gap-5">
+                    <div className="flex-center gap-6 mt-4">
                         {
                             socials.map((social) => (
-                                <a href={social.url} key={social.name} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
-                                    <img src={social.icon} alt={social.name} />
+                                <a
+                                    href={social.url}
+                                    key={social.name}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={social.name}
+                                    className="hover:scale-110 transition-transform duration-300"
+                                >
+                                    <img src={social.icon} alt={social.name} className="w-8 h-8 object-contain opacity-80 hover:opacity-100" />
                                 </a>
                             ))
                         }
                     </div>
                 </div>
+            </div>
+            <div className="mt-20 pb-10 text-center text-white/30 text-xs border-t border-white/10 pt-10">
+                <p>&copy; {new Date().getFullYear()} Fron Bar. Të gjitha të drejtat e rezervuara.</p>
             </div>
         </footer>
     )

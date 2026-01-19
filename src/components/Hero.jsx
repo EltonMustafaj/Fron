@@ -9,7 +9,7 @@ const Hero = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
 
     useGSAP(() => {
-        const heroSplit = new SplitText(".title", { type: 'chars, words' });
+        const heroSplit = new SplitText(".hero-title", { type: 'chars, words' });
         const paragraphSplit = new SplitText(".subtitle", { type: 'lines' });
 
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
@@ -62,28 +62,46 @@ const Hero = () => {
 
     return (
         <>
-            <section id="hero" className="noisy">
-                <h1 className="title">FRON BAR</h1>
-                <img src="/images/hero-left-leaf.png" alt="hero-left-leaf" className="left-leaf" />
-                <img src="/images/hero-right-leaf.png" alt="hero-right-leaf" className="right-leaf" />
+            <section id="hero" className="noisy relative overflow-hidden">
+                <h1 className="hero-title select-none">FRON BAR</h1>
+                <img src="/images/hero-left-leaf.png" alt="leaf decoration" className="left-leaf pointer-events-none" />
+                <img src="/images/hero-right-leaf.png" alt="leaf decoration" className="right-leaf pointer-events-none" />
 
                 <div className="body">
                     <div className="content">
                         <div className="space-y-5 hidden md:block">
-                            <p>E ftohtë . E freskët . Klasike</p>
-                            <p className="subtitle">
+                            <p className="uppercase tracking-widest text-sm opacity-60">E ftohtë . E freskët . Klasike</p>
+                            <p className="subtitle text-yellow">
                                 Shijo Shpirtin <br /> e Verës
                             </p>
                         </div>
                         <div className="view-cocktails">
-                            <p className="subtitle">Çdo pije në menunë tonë është një përzierje e përbërësve premium dhe recetave të përjetshme — e krijuar për të kënaqur shqisat tuaja.</p>
-                            <a href="#cocktails">Shiko Menunë</a>
+                            <p className="subtitle mb-4">Çdo pije në menunë tonë është një përzierje e përbërësve premium dhe recetave të përjetshme — e krijuar për të kënaqur shqisat tuaja.</p>
+                            <a
+                                href="#cocktails"
+                                className="inline-block border border-yellow/50 px-8 py-3 rounded-full hover:bg-yellow hover:text-black transition-all duration-300 font-semibold"
+                            >
+                                Shiko Menunë
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                {/* Scroll Indicator */}
+                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-bounce">
+                    <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+                    <div className="w-[1px] h-10 bg-gradient-to-b from-white to-transparent"></div>
+                </div>
             </section>
-            <div className="video absolute inset-0">
-                <video ref={videoRef} src="/videos/output.mp4" muted playsInline preload="auto"></video>
+            <div className="video absolute inset-0 pointer-events-none">
+                <video
+                    ref={videoRef}
+                    src="/videos/output.mp4"
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover opacity-60"
+                ></video>
             </div>
         </>
     )
